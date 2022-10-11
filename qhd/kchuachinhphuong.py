@@ -1,17 +1,17 @@
+from math import sqrt
 n = 20
 a = []
-for i in range(2,n//2+1):
-	if n % i == 0:
+i = 2
+d = [0] * 20
+p = 1
+while n != 1:
+	while n % i == 0:
+		d[i] = d[i] + 1
+		n = n // i
+	if d[i] >= 1:		
 		a.append(i)
-a.append(n)
-max = 0
-for i in range(len(a)):
-	kt = True
-	for j in range(2,a[i]):
-		if a[i] % (j**2) == 0:
-			kt = False
-			break
-	if kt == True and a[i] > max:
-		max = a[i]
-print(max)
+	i+=1
+for i in a:
+	p = p*i
+print(p)
 

@@ -11,8 +11,9 @@ csc = []
 out = ''
 for i in range(1,s1):
 	T[i] = T[i-1] + a[i]
+print(T)
 for i in range(1,s1):
-	for j in range(i, s1):+
+	for j in range(i, s1):
 		if T[j] - T[i-1] > tmax:
 			tmax = T[j] - T[i-1]
 			csd = [i]

@@ -1,19 +1,17 @@
 n = [3,8,5,1,2,12,9]
 from math import sqrt
-a = [True] * (1000000)
-a[0] = a[1] = False
-d = 0
-for i in range(2,int(sqrt(1000000))):
-	if a[i] == True:
-		for j in range(2,1000000//i):
-			a[i*j] = False
+snt = [True] * 1000001
+can_n=int(1000001**0.5)+1
+snt[0] = snt[1] = False
+for i in range(2,can_n+1):
+	if snt[i] == True:
+		for j in range(i*i,1000001,i):
+			snt[j] = False
 i = 2
-print(a[0:10])
-mini = min(a)
-maxi = max(a)
+d = 0
+print(snt[0:10])
 while True:
-	if i not in n and a[i] == True:
-		if i < mini or i > maxi:
-			print(i)
-			break
+	if i not in n and snt[i] == True:
+		print(i)
+		break
 	i+=1
