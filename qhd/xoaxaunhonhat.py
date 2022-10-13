@@ -1,11 +1,12 @@
-p = 3; k = 11
+p = 3; k = 3
 a = [3,4,2]
 s = [123,0,45]
 t = ''
 for i in range(p):
 	for j in range(a[i]):
 		t+=str(s[i])
-print(t)
+print(t,len(t))
+t = '987654321'
 d = 0
 while k !=0 and d < len(t) - k:
 	min = 999 
