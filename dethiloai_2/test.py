@@ -1,4 +1,4 @@
-def sieve(n):
+"""def sieve(n):
     danh_dau=[True]*(n+1) 
     can_n=int(n**0.5)+1
     for i in range(2,can_n+1):
@@ -9,5 +9,7 @@ def sieve(n):
     for i in range(2,n+1):
         if danh_dau[i]:
             primes.append(i)
-    return primes
-print(sieve(10030))
+    return primes"""
+a = [1,2,3]
+a[0] = 4
+print(a)
