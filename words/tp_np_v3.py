@@ -31,4 +31,4 @@ def TPHX(n):
         n = n//16
     return S[::-1]
 
-print(TPHX(27))
+print(TPHX(999))

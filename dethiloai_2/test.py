@@ -10,6 +10,4 @@
         if danh_dau[i]:
             primes.append(i)
     return primes"""
-
-a = [3] * 10000
-print(a)
+print(hex(999))

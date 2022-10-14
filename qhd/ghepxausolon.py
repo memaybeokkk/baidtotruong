@@ -16,7 +16,7 @@ def sapxep(a, L, R):
 			tg=a[i]
 			a[i]=a[j]
 			a[j]=tg
-			i+=1
+			i+=1 
 			j-=1
 
 
