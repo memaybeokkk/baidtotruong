@@ -5,22 +5,17 @@ def sapxep(a, L, R):
 	i = L
 	j = R
 	x = a[(L + R)//2]
-
 	while (i<=j):
 		while a[i] < x:
 			i = i+1
-
 		while a[j] > x:
 			j = j - 1
-
 		if i <= j:
 			tg=a[i]
 			a[i]=a[j]
 			a[j]=tg
 			i+=1
 			j-=1
-
-
 		if L<j:
 			sapxep(a,L, j)
 		if i<R:

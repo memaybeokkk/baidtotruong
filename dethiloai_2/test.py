@@ -10,6 +10,6 @@
         if danh_dau[i]:
             primes.append(i)
     return primes"""
-a = [1,2,3]
-a[0] = 4
+
+a = [3] * 10000
 print(a)

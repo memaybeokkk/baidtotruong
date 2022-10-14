@@ -1,4 +1,4 @@
-p = 3; k =3
+p = 3; k =11
 a = [3,4,2]
 s = [123,0,45]
 t = ''
@@ -7,9 +7,8 @@ for i in range(p):
 		t+=str(s[i])
 print(t)
 d = 0
-t = '54321'
 while k != 0 and d<len(t)-k :
-	max = 0
+	max = t[d]
 	vt = d
 	for i in range(d,d+k+1):
 		if int(t[i]) > int(max):

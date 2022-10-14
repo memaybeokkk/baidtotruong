@@ -6,14 +6,13 @@ for i in range(p):
 	for j in range(a[i]):
 		t+=str(s[i])
 print(t,len(t))
-t = '987654321'
 d = 0
 while k !=0 and d < len(t) - k:
-	min = 999 
+	min = t[d]
 	vt = d
 	for i in range(d+1,d+k+1):
-		if int(t[i]) < min:
-			min = int(t[i])
+		if int(t[i]) < int(min):
+			min = t[i]
 			vt = i
 	t = t[:d] + t[vt:]
 	k = k - vt + d

@@ -8,8 +8,8 @@ for i in range(n):
 	dem = 0
 	while j < n and dem < m:
 		j+=1
-		nho[a[i]]+=1
-		if nho[a[i]] == 1:
+		nho[a[j]]+=1
+		if nho[a[j]] == 1:
 			dem+=1
 	if dem == m and dapso>j-i+1:
 		dapso = j-i+1
