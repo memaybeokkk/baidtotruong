@@ -46,35 +46,24 @@ x=x+'='+str(F)
 '''
 f2=open('ggmap.out','w')
 f1=open('ggmap.inp','r')
-a=[int(x) for x in f1.readline().split()]
-n=a[0]+1;m=a[1];s=a[2];f=5
-c=[0]*n 
+n=int(f1.readline())+1
 max=999999
-for i in range(n):
-	c[i]=[max]*n
-for i in f1:
-	a=[int(x) for x in i.split()]
-	c[a[0]][a[1]]=a[2]
-d=[max]*n 
-fr=[0]*n 
-truoc=[0]*n 
-d[s]=0  
-u=s 
-while u!=f and u!=0:
-	min=max 
-	for v in range(1,n):
-		if d[v]<min and fr[v]==0:
-			min=d[v]
-			u=v 
-	fr[u]=1 
-	for v in range(1,n):
-		if d[v]>d[u]+c[u][v] and fr[v]==0:
-			print(v,d[u]+c[u][v])
-			d[v]=d[u]+c[u][v]
-			truoc[v]=u 
+c=[[max]*n]
 
-di=[u]
-while truoc[u]!=0:
-	di.append(truoc[u])
-	u=truoc[u]
-print(di[::-1])
+for i in f1:
+	c.append([max]+[int(x) for x in i.split()])
+import itertools
+def SUM(i):
+	return c[i[0]][i[1]]+c[i[1]][i[2]]+c[i[2]][i[3]]+c[i[3]][i[4]]+c[i[4]][i[0]]
+d=list(itertools.permutations([2,3,4,5]))
+b=[]
+for i in d:
+	b.append([1]+list(i))
+dmin=max
+min='a'
+for i in b:
+	if SUM(i)<dmin:
+		dmin=SUM(i)
+		min=' '.join(str(x) for x in i)
+		min+= ' 1'
+print(min)
