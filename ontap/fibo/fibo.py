@@ -8,6 +8,7 @@ for i in range(2,50):
     	min = i
     if a[i] >m:
     	break
+print(min)
 print(m,end='=')
 while m != 0 and min >=0:
 	if m - a[min] > 0:

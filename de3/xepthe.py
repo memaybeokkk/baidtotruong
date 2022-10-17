@@ -1,4 +1,4 @@
-s = 'OOOOOOOOOOOO'
+s = 'OXXXOXOOXOOX'
 def ktx(a,b):
 	for j in range(b):
 		kt = True

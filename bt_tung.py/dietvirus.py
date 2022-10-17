@@ -9,6 +9,7 @@ with open('Virus.inp','r') as f1:
 	print(a)
 	for j in range(n):		
 		s2 = f1.readline()
+		print(s2)
 		d=0
 		while d != k:
 			d = 0

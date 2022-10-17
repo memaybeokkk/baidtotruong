@@ -7,6 +7,7 @@ for i in range(m):
 		a = []
 		break
 	a.append(nhap.count('*')+ 1)
+print(a)
 a = sorted(a)
 dem = 0
 while a != []:
@@ -15,6 +16,7 @@ while a != []:
 		if i-min == 0:
 			b.append(i)
 	for i in b:
+		print(a.index(i))
 		a.pop(a.index(i))
 	b = []
 	dem+=1

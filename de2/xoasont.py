@@ -13,6 +13,7 @@ for i in range(2,int(sqrt(1000000))):
 		dem+=1
 		if dem == n:
 			break
+print(s)
 d = -1
 nk = len(s) - k
 while k != 0 or (d+1) != nk:

@@ -12,6 +12,7 @@ s = s1.rstrip('.')
 while i < len(s)-1:
 	while s[i] != '.' and i < len(s)-1:
 		i+=1
+	print(i)
 	vtd = i - 1
 	dem = 0
 	while s[i] == '.':
