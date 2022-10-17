@@ -19,7 +19,7 @@ value = 0
 while n != 0:
 	if L[n][m] != L[n-1][m]:
 		print(v[n],w[n],m,sep=' ')
-		value = value + v[n]e
+		value = value + v[n]
 
 		m = m - w[n]
 	n = n - 1
