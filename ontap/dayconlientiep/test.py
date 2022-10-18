@@ -1,12 +1,7 @@
-a=[1,5,3,0,2,1,4,3,6,8]
-l=[0]*(len(a))
-max=0
-for i in range(1,len(a)):
-	lmax=0
-	for j in range(i-1,-1,-1):
-		if a[i]-a[j]==2 and l[j]>lmax:
-			lmax=l[j]
-	l[i]=lmax+1
-	if l[i]>max:
-		max=l[i]
-print(max)
+n = 6
+c = [0] * (n+1)
+max = 10000
+for i in range(n+1):
+	c[i] = [max] * (n+1)
+
+print(c)

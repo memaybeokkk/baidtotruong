@@ -8,10 +8,8 @@ F = a[3]
 c = [0] * (n+1)
 max = 10000
 for i in range(n+1):
-	c[i] = [0] * (n+1)
-for i in range(n+1):
-	for j in range(n+1):
-		c[i][j] = max
+	c[i] = [max] * (n+1)
+
 for k in f:
 	b = [int(i) for i in k.split()]
 	u = b[0]
@@ -41,8 +39,10 @@ while u!=F and u !=0:
 			if d[v] > d[u] + c[u][v] and Fr[v] == 0:
 				d[v] = d[u] + c[u][v]
 				Truoc[v] = u
-x=''
-x=x+'='+str(F)
+
+while truoc[u] != 0:
+	print(truoc[u])
+	u=truoc[u]
 '''
 f2=open('ggmap.out','w')
 f1=open('ggmap.inp','r')
@@ -66,4 +66,4 @@ for i in b:
 		dmin=SUM(i)
 		min=' '.join(str(x) for x in i)
 		min+= ' 1'
-print(min)
+print(dmin,min)

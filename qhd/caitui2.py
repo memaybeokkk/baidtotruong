@@ -1,0 +1,22 @@
+n = 4
+m = 7
+v = [0,1,4,5,7]
+w = [0,1,3,4,5]
+L = [0] * (n+1)
+for i in range(n+1):
+	L[i] = [0] * (m+1)
+for i in range(1,n+1):
+	for j in range(1,m+1):
+		L[i][j] = L[i-1][j]
+		if w[i] <= j and L[i][j] < v[i] + L[i-1][j-w[i]]:
+			L[i][j] = v[i] + L[i-1][j-w[i]]
+value = 0
+while n != 0:
+	if L[n][m] != L[n-1][m]:
+		print(v[n])
+		value+=v[n]
+		m-=w[n]
+		if m == 0:
+			break
+	n-=1
+print(value)
